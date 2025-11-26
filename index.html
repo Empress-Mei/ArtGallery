@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akemi M. Portfolio</title>
+<style>
+    /* Reset */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 50px;
+        font-size: 16px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #26619c; /* hehe lapiz */
+        margin-left: 30px;
+        font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 50px;
+        position: relative;
+    }
+
+    .hero-text {
+        max-width: 50%;
+    }
+
+    .hero-text h1 {
+        font-size: 100px;
+        font-weight: 900;
+        line-height: 1;
+        color:#26619c;
+        margin-bottom: 30px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        color: #26619c;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .hero-text button {
+        padding: 12px 30px;
+        font-size: 16px;
+        border: 2px solid #26619c;
+        background: none;
+        color: #26619c;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .hero-text button:hover {
+        background-color:#26619c;
+        color: #fff;
+    }
+
+    .hero-image {
+        position: relative;
+    }
+
+    .hero-image img {
+        width: 400px;
+        max-width: 100%;
+        display: block;
+        filter: grayscale(100%);
+    }
+
+    .red-shape {
+        position: absolute;
+        right: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 150px;
+        height: 150px;
+        border: 2px solid#26619c;
+        border-radius: 50%;
+        background: repeating-conic-gradient(#26619c 0% 10%, transparent 10% 20%);
+        z-index: -1;
+    }
+
+    /* About Section */
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 100px 50px;
+        background-color: #000;
+        color: #fff;
+        flex-wrap: wrap;
+    }
+
+    .about-text {
+        max-width: 45%;
+    }
+
+    .about-text h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .about-image {
+        max-width: 50%;
+        position: relative;
+    }
+
+    .about-image img {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .about-caption p {
+        margin-bottom: 15px;
+    }
+
+    .about-caption button {
+        padding: 10px 25px;
+        font-size: 14px;
+        border: 2px solid #fff;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .about-caption button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Education Section */
+    .education {
+        padding: 80px 50px;
+        background-color: #f7f2e7; /* distinct background */
+    }
+
+    .education h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #26619c;
+    }
+
+    .edu-item {
+        padding: 20px 0;
+        border-top: 1px solid #ccc;
+        font-size: 16px;
+        color: #333;
+    }
+
+    /* Experience Section */
+    .experience {
+        padding: 80px 50px;
+        background-color: #ffffff;
+    }
+
+    .experience h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #26619c;
+    }
+
+    .exp-item {
+        padding: 20px 0;
+        border-top: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .exp-title h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .role-type {
+        font-size: 14px;
+        color: #444;
+    }
+
+    .exp-desc {
+        max-width: 55%;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #444;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 50px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+    }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .hero, .about {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text, .about-text, .about-image {
+            max-width: 100%;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+        }
+
+        .hero-image {
+            margin-top: 40px;
+        }
+
+        .red-shape {
+            display: none;
+        }
+
+        .exp-item, .edu-item {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .exp-desc {
+            max-width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Junior<br>Web Developer</h1>
+        <p>Willing to learn, open to feedback, hardworking, and ready to grow and gain experience in my first job.</p>
+        <button>View Portfolio</button>
+    </div>
+    <div class="hero-image">
+        <img src="images/akemi.png" alt="Akemi Rose S. Maisog">
+        <div class="red-shape"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="about-text">
+        <h2>About Akemi M.</h2>
+        <p>An Aspiring junior Web developer, a BS Pharmacy Undergraduate, and a junior fire and rescue volunteer.</p>
+    </div>
+    <div class="about-image">
+        <img src="b0ec649f-53c6-433c-ad1b-e08fca2f2c55.png" alt="Stage Curtain">
+        <div class="about-caption">
+            <p>Placeholder</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="education">
+    <h2>Education</h2>
+    <p class="section-sub">Academic Background</p>
+    <div class="edu-item">
+        <h3>BS Pharmacy Undergraduate - Our Lady of Fatima-Laguna 2025</h3>
+        <h3>Ict Animation - Informatics College 2021 </h3>
+        <h3>Web development - MCTI 2025</h3>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section class="Activities>
+    <h2>Activities</h2>
+  
+
+    <div class="exp-item">
+        <div class="exp-title">
+            <h3>Creative 2024</h3>
+        </div>
+        <p class="exp-desc">Designed visual materials on awareness and knowledge about STD and HIV prevention among 
+adult participants. </p>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-title">
+            <h3>Committee/Information Desk 2024</h3>
+          
+        </div>
+        <p class="exp-desc">Community awareness in alternative health practices through interactive seminars.</p>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-title">
+            <h3>Basic Life Support Training Lecture </h3>
+        </div>
+        <p class="exp-desc">Placeholder</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Contact Me: <a href="Maisog.akmi@gmail.com">Maisog.akmi@gmail.com</a> | Phone: (+63)9292432032</p>
+    <p>&copy; 2025 Akemi M. Portfolio</p>
+</footer>
+
+</body>
+</html>
